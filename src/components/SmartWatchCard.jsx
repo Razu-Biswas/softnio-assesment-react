@@ -5,7 +5,7 @@ import CartModal from "./CartModal";
 const SmartWatchCard = () => {
   const [selectedColor, setSelectedColor] = useState("purple");
   const [selectedSize, setSelectedSize] = useState(null);
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
   const [showCheckout, setShowCheckout] = useState(false);
   const [cartItems, setCartItems] = useState([]);
 
@@ -54,12 +54,12 @@ const SmartWatchCard = () => {
   };
 
   return (
-    <div className="w-full md:max-w-4xl md:mx-auto p-6 flex flex-col md:flex-row gap-8">
+    <div className="max-w-4xl mx-auto bg-white rounded-md shadow-lg w-full md:max-w-4xl md:mx-auto p-6 flex flex-col md:flex-row gap-8">
       <div className="md:w-1/2 rounded-lg">
         <img
           src={watchImages[selectedColor]}
           alt="Smart Watch"
-          className="w-full h-auto"
+          className="w-full h-auto rounded"
         />
       </div>
 
